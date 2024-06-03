@@ -1,13 +1,4 @@
-function addUp(array) {
-    if (!Array.isArray(array)) {
-        throw new TypeError('addUp() expects an array as input');
-    }
+const numbers = [1, 2, 3, 4, 10];
+const sum = numbers.reduce((total, num) => total + num, 0);
+console.log(sum);
 
-    return array.reduce(function(total, value) {
-        if (typeof value !== 'number') {
-            throw new TypeError('addUp() expects all elements to be numbers');
-        }
-
-        return total + value;
-    }, 0);
-}
